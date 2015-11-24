@@ -37,5 +37,5 @@ esptouchPlugin.cancelConfig(function(res) {
 
 #warning 
 
-//you must call "esptouchPlugin.cancelConfig" when you want to stop the config,if not it will make some mistake when you call
-//"esptouchPlugin.smartConfig" the other time.
+you must call "esptouchPlugin.cancelConfig" when you want to stop the config,if not it will make some mistake when you call
+"esptouchPlugin.smartConfig" the other time.
