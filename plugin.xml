@@ -7,7 +7,7 @@
     <js-module name="esptouchPlugin" src="www/esptouchPlugin.js">
         <clobbers target="esptouchPlugin"/>
     </js-module>
-	
+<!-- 	android platform -->
     <platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
@@ -23,4 +23,19 @@
 		<source-file src="src/android/esptouchPlugin.java" target-dir="src/com/icubespace/cordova_esptouch/" />
         <source-file src="src/android/esptouch.jar" target-dir="libs/" />
     </platform>
+<!-- 	ios platform -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="esptouchPlugin">
+			 <param name="ios-package" value="esptouchPlugin"/>
+		   </feature>
+	   </config-file>
+	   <header-file src="src/ios/esptouchPlugin.h"/>
+       <source-file src="src/ios/esptouchPlugin.m"/>
+	   
+	   <framework src="CoreGraphics.framework" />
+	   <framework src="UIKit.framework" />
+	   <framework src="Foundation.framework" />
+	   <framework src="src/ios/Esptouch.framework" custom="true" framework="true"/>
+	</platform>
 </plugin>
