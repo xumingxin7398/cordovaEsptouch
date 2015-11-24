@@ -1,7 +1,7 @@
 # cordovaEsptouch
 a cordova plugin for Esptouch which smartconfig esp8266
 #usage
-//1.esptouchPlugin.smartConfig 
+1.esptouchPlugin.smartConfig 
 
 //@apSsid,ssid of the wifi,for example: "wifiName"
 
@@ -23,7 +23,7 @@ esptouchPlugin.smartConfig(apSsid,apBssid,apPassword,isSsidHiddenStr,taskResultC
   
 });
 
-//2.esptouchPlugin.cancelConfig
+2.esptouchPlugin.cancelConfig
 
 esptouchPlugin.cancelConfig(function(res) {
 
