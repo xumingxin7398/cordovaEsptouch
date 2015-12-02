@@ -1,6 +1,9 @@
 # cordovaEsptouch
 a cordova plugin for Esptouch which smartconfig esp8266
-#usage
+# Install
+cordova plugin add https://github.com/xumingxin7398/cordovaEsptouch.git
+
+# usage
 1.esptouchPlugin.smartConfig 
 
 //@apSsid,ssid of the wifi,for example: "wifiName"
