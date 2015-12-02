@@ -44,4 +44,4 @@ you must call "esptouchPlugin.cancelConfig" when you want to stop the config,if 
 "esptouchPlugin.smartConfig" the other time.
 
 
-Since ios emulator does not support the SmartConfig feature,so I did not package the i386 architectures in the "Esptouch.framework".You want to remove i386 architectures in "Build Settings->Architectures" and test your project on a real iphone.
+Since ios emulator does not support the SmartConfig feature,so I did not package the i386 architectures in the "Esptouch.framework".You need to remove i386 architectures in "Build Settings->Architectures" and test your project on a real iphone.
