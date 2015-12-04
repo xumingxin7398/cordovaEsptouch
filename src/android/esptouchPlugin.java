@@ -85,10 +85,19 @@ public class esptouchPlugin extends CordovaPlugin {
 				}//end runnable
 			);
 			return true;
-		}else{
+		}
+		else if (action.equals("cancelConfig")) {
+        	mEsptouchTask.interrupt();
+        	PluginResult result = new PluginResult(PluginResult.Status.OK, "cancel success");
+        	result.setKeepCallback(true);           // keep callback after this call
+			receivingCallbackContext.sendPluginResult(result);
+			return true;
+        }
+		else{
 			callbackContext.error("can not find the function "+action);
 			return false;
 		}
+		
 		
 	}
 
