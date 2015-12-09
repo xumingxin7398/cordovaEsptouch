@@ -10,12 +10,12 @@
 
 -(void) onEsptouchResultAddedWithResult: (ESPTouchResult *) result
 {
-    NSString *InetAddress=[ESP_NetUtil descriptionInetAddrByData:result.ipAddrData];
-    NSString *text=[NSString stringWithFormat:@"bssid=%@,InetAddress=%@",result.bssid,InetAddress];
-    CDVPluginResult* pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: text];
-    [pluginResult setKeepCallbackAsBool:true];
-    //[self.commandDelegate sendPluginResult:pluginResult callbackId:self.command.callbackId];  //add by lianghuiyuan
+        NSString *InetAddress=[ESP_NetUtil descriptionInetAddrByData:result.ipAddrData];
+        NSString *text=[NSString stringWithFormat:@"bssid=%@,InetAddress=%@",result.bssid,InetAddress];
+        CDVPluginResult* pluginResult = nil;
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: text];
+        [pluginResult setKeepCallbackAsBool:true];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.command.callbackId];
 }
 @end
 
